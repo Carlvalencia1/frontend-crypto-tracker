@@ -1,0 +1,19 @@
+
+<div class="alerts-container">
+  <h1>Price Alerts</h1>
+  <form (submit)="addAlert(); $event.preventDefault()">
+    <label>
+      Crypto:
+      <input type="text" placeholder="e.g., BTC" [(ngModel)]="newAlert.crypto" name="crypto">
+    </label>
+    <label>
+      Target Price:
+      <input type="number" placeholder="e.g., 50000" [(ngModel)]="newAlert.price" name="price">
+    </label>
+    <button type="submit">Add Alert</button>
+  </form>
+
+  <div *ngFor="let alert of alerts" class="alert-card">
+    <p>Alert for {{ alert.crypto }} at ${{ alert.price }}</p>
+  </div>
+</div>

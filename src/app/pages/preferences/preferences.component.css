@@ -1,0 +1,15 @@
+/* src/app/pages/preferences/preferences.component.css */
+.preferences-container {
+    padding: 2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  

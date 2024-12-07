@@ -1,0 +1,62 @@
+<div class="main-container">
+  <h1>Portafolio Virtual</h1>
+  <div class="portfolio-container">
+    <div class="balance-section">
+      <h2>Balance estimado <span class="icon"></span></h2>
+      <div class="balance">
+        <span class="balance-amount">{{ balance.toFixed(2) }}</span>
+        <span class="balance-currency">{{ currency }}</span>
+      </div>
+      <div class="equivalent">
+        ≈ {{ equivalent.toFixed(2) }} €
+      </div>
+      <div class="pnl-today">
+        PnL de hoy <span class="pnl-amount" [ngClass]="{'price-change-up': pnlToday >= 0, 'price-change-down': pnlToday < 0}">
+          + {{ pnlToday.toFixed(2) }} € ({{ pnlPercentage.toFixed(2) }}%)
+        </span>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="action-btn">Depositar</button>
+      <button class="action-btn">Retirar</button>
+      <button class="action-btn">Efectivo</button>
+    </div>
+  </div>
+
+  <!-- Sección de Criptomonedas Populares -->
+  <div class="markets-container">
+    <h3>Mercados</h3>
+    <div class="tabs">
+      <span class="tab active">Populares</span>
+    </div>
+    <table class="market-table">
+      <thead>
+        <tr>
+          <th>Moneda</th>
+          <th>Precio de la moneda</th>
+          <th>Cambio en 24 h</th>
+          <th>Operar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let crypto of popularCryptos">
+          <td>
+            <div class="crypto-info">
+              <img [src]="crypto.image" alt="{{ crypto.name }} logo" class="crypto-logo">
+              <div>
+                <span class="crypto-symbol">{{ crypto.symbol.toUpperCase() }}</span><br>
+                <span class="crypto-name">{{ crypto.name }}</span>
+              </div>
+            </div>
+          </td>
+          <td>€{{ crypto.current_price | number: '1.2-2' }}</td>
+          <td [ngClass]="{'price-change-up': crypto.price_change_percentage_24h > 0, 'price-change-down': crypto.price_change_percentage_24h < 0}">
+            {{ crypto.price_change_percentage_24h | number: '1.2-2' }}%
+          </td>
+          <td><a href="home" class="operate-link">Operar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

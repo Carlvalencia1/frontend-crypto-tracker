@@ -1,0 +1,21 @@
+<!-- src/app/pages/transactions/transactions.component.html -->
+<div class="transactions-container">
+    <h1>Transaction History</h1>
+    <table class="transaction-table">
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Crypto</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>{{ transaction.crypto }}</td>
+        <td>{{ transaction.quantity }}</td>
+        <td>{{ transaction.price }}</td>
+      </tr>
+    </table>
+  </div>
+  

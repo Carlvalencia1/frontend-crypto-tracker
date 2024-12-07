@@ -1,0 +1,195 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; /* Espacio desde la parte superior */
+}
+
+.main-container h1 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  text-align: center;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a3b5f;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(21, 99, 21, 0.1);
+  max-width: 600px;
+  width: 100%; /* Asegura que ocupe el ancho completo de la pantalla */
+  font-family: Arial, sans-serif;
+  margin-bottom: 2rem; /* Espacio debajo de la sección de portafolio */
+}
+
+.balance-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.balance-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+.balance {
+  display: flex;
+  align-items: baseline;
+  font-size: 2.5rem;
+  font-weight: bold;
+  gap: 0.3rem;
+}
+
+.balance-amount {
+  color: #ffffff;
+}
+
+.balance-currency {
+  color: #9a9a9a;
+  font-size: 1.2rem;
+}
+
+.equivalent {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+.pnl-today {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+.pnl-amount {
+  color: #00c853;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background-color: #0d9b37;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #b8a604;
+  color: #ffffff;
+}
+
+/* Estilos para la sección de Mercados Populares */
+.markets-container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  font-family: Arial, sans-serif;
+  margin-top: 1rem; /* Espacio entre la sección de portafolio y los mercados */
+}
+
+.markets-container h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #9a9a9a;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  color: #9a9a9a;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.market-table th,
+.market-table td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.market-table th {
+  color: #9a9a9a;
+  font-weight: 600;
+}
+
+.market-table td {
+  border-top: 1px solid #333;
+}
+
+.crypto-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crypto-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.crypto-symbol {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.crypto-name {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+.price-change-up {
+  color: #00c853;
+}
+
+.price-change-down {
+  color: #ff5252;
+}
+
+.operate-link {
+  color: #ffb74d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.operate-link:hover {
+  text-decoration: underline;
+}

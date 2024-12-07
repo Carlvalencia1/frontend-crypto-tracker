@@ -1,0 +1,78 @@
+<div class="crypto-card border p-4 rounded shadow relative max-w-md mx-auto">
+  <!-- Menú de tres puntos -->
+  <div class="absolute top-2 right-2">
+    <button (click)="toggleMenu()" class="text-gray-600 hover:text-gray-800">
+      &#x22EE; <!-- Icono de tres puntos -->
+    </button>
+    <div
+      *ngIf="showMenu"
+      class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded border"
+    >
+      <button
+        (click)="openModal()"
+        class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+      >
+        Guardar a Favoritos
+      </button>
+      <button
+        *ngIf="isFavorite"
+        (click)="removeFromFavorites()"
+        class="block w-full text-left px-4 py-2 text-red-700 hover:bg-red-100"
+      >
+        Eliminar de Favoritos
+      </button>
+    </div>
+  </div>
+
+  <img [src]="crypto.image" alt="{{ crypto.name }} logo" class="crypto-logo" />
+
+  <h2 class="text-lg font-bold">
+    {{ crypto.name }} ({{ crypto.symbol.toUpperCase() }})
+  </h2>
+
+  <p
+    class="crypto-price"
+    [ngClass]="{ 'price-up': crypto.price_change_percentage_24h >= 0, 'price-down': crypto.price_change_percentage_24h < 0 }"
+  >
+    Price: ${{ crypto.current_price }}
+  </p>
+
+  <p>Market Cap: ${{ crypto.market_cap }}</p>
+
+  <!-- Sección de información adicional -->
+  <div *ngIf="showMore" class="extra-info">
+    <p>24h High: ${{ crypto.high_24h }}</p>
+    <p>24h Low: ${{ crypto.low_24h }}</p>
+    <p>Total Volume: ${{ crypto.total_volume }}</p>
+    <p>Circulating Supply: {{ crypto.circulating_supply | number }}</p>
+  </div>
+
+  <button (click)="toggleMore()" class="ver-mas-btn">
+    {{ showMore ? 'Ver menos' : 'Ver más' }}
+  </button>
+
+  <!-- Modal para guardar a favoritos -->
+  <div
+    *ngIf="showModal"
+    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
+  >
+    <div class="bg-white p-6 rounded shadow-lg w-96 relative z-60">
+      <h2 class="text-lg font-bold mb-4">Guardar a Favoritos</h2>
+      <p>¿Quieres guardar {{ crypto.name }} como favorito?</p>
+      <div class="flex justify-end mt-4">
+        <button
+          class="bg-gray-300 text-gray-800 px-4 py-2 rounded mr-2"
+          (click)="closeModal()"
+        >
+          Cancelar
+        </button>
+        <button
+          class="bg-blue-500 text-white px-4 py-2 rounded"
+          (click)="addToFavorites()"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

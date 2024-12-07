@@ -1,0 +1,55 @@
+/* src/app/components/cards/crypto-card.component.css */
+.crypto-card {
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.crypto-card .crypto-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.crypto-card .crypto-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  transition: color 0.5s;
+}
+
+.crypto-card .price-up {
+  color: green;
+}
+
+.crypto-card .price-down {
+  color: red;
+}
+
+.crypto-card .extra-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.crypto-card .ver-mas-btn {
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.crypto-card .ver-mas-btn:hover {
+  background-color: #0056b3;
+}

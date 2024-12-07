@@ -1,0 +1,23 @@
+
+.market-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 4rem; 
+  justify-content: center; 
+  margin-top: 4rem; 
+}
+
+.market-card {
+  background-color: #8a7a7a96;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(171, 223, 207, 0.479);
+  flex: 1 1 calc(35% - 1rem); 
+  max-width: 200px; 
+  text-align: center;
+}
